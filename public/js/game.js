@@ -94,24 +94,22 @@ document.addEventListener("DOMContentLoaded", function () {
   function endGame() {
     gameRunning = false;
     if (clickBtn) clickBtn.disabled = true;
- 
-    // ✅ Fixed: old code did  start_button.style.display = "show"
-    // "show" is not a valid CSS value — correct value is "block"
     if (startBtn) startBtn.style.display = "block";
- 
     if (timerDisplay) timerDisplay.style.color = "";
-    if (gameMessage)  gameMessage.textContent  = `⏱ Time's Up! You clicked ${clicks} times!`;
- 
-    // Save score via utils.js
-    saveScore(clicks);
- 
-    // ── OFFLINE: show best score from localStorage ──────────
+    if (gameMessage)  gameMessage.textContent  = `⏱ Time's Up! You clicked ${clicks} times! SCORE is ${clicks} `;
+
+     
+   // ── OFFLINE: show best score from localStorage ──────────
+    
+   // Save score via utils.js
+   /* saveScore(clicks);
     const best = getBestScore();
     const bestDisplay = document.getElementById("best_score");
     if (bestDisplay) bestDisplay.textContent = best;
+    */
  
     // ── BACKEND MODE (uncomment when server is ready) ───────
-    /*
+    
     const user = getCurrentUser();
     if (user) {
       fetch("/api/score", {
@@ -129,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .catch(err => console.error("Score save error:", err));
     }
-    */
+    
   }
  
 }); // end DOMContentLoaded
