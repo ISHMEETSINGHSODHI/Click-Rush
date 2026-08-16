@@ -15,6 +15,8 @@ const path    = require("path");
 require("dotenv").config();
 
 const app = express();
+app.set("trust proxy", 1); // ← tells Express to trust Railway's proxy headers
+                            //   (needed for secure cookies to work behind it)
 
 // ─── MIDDLEWARE ─────────────────────────────────────────────
 app.use(express.json());
@@ -29,10 +31,11 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure: process.env.NODE_ENV === "production", // true on Railway (HTTPS)
-    httpOnly: true,
-    maxAge: 7 * 24 * 60 * 60 * 1000   // 7 days
-  }
+  secure: process.env.NODE_ENV === "production",
+  httpOnly: true,
+  sameSite: "lax",
+  maxAge: 7 * 24 * 60 * 60 * 1000
+}
 }));
 
 // ─── API ROUTES ─────────────────────────────────────────────
