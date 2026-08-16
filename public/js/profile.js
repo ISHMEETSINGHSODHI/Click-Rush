@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
  
  
   // ─── OFFLINE: read scores from localStorage ────────────────
- 
+ // ── OFFLINE MODE (commented out — backend handles this now) ──
+ /*
   const scores = user.scores || [];
   const best   = scores.length > 0 ? Math.max(...scores.map(s => s.score)) : 0;
   const total  = scores.length;
@@ -52,11 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       `).join("");
     }
-  }
+  }*/
  
  
   // ── BACKEND MODE (uncomment when server is ready) ──────────
-  /*
+  
   async function loadProfile() {
     try {
       const response = await fetch("/api/profile", {
@@ -88,6 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
  
   loadProfile();
-  */
+ 
  
 }); // end DOMContentLoaded
