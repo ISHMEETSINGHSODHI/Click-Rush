@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Each JS file should only grab elements from its OWN page
  
   const leaderboardData = document.getElementById("leaderboardData");
- 
-  // Correct IDs match what's in the HTML
   const btnGlobal  = document.getElementById("global");
   const btnWeekly  = document.getElementById("week");
   const btnDaily   = document.getElementById("today");
@@ -31,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Reads all users from localStorage, sorts by best score
     // Comment this block out once your backend is ready
  
-    const users = JSON.parse(localStorage.getItem("users") || "[]");
+    /*const users = JSON.parse(localStorage.getItem("users") || "[]");
  
     let scored = users
       .filter(u => u.scores && u.scores.length > 0)
@@ -61,10 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
  
     displayLeaderboard(scored);
- 
+ */
  
     // ── BACKEND MODE (uncomment when server is ready) ────────
-    /*
+    
     try {
       const response = await fetch(`/api/leaderboard/${type}`, {
         credentials: "include"
@@ -81,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         leaderboardData.innerHTML = "<p>Unable to load leaderboard. Try again.</p>";
       }
     }
-    */
+   
   }
  
  
