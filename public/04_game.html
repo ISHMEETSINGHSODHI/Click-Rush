@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click-Rush</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="01_index.html">Click-Rush</a>
+      </div>
+      <nav>
+        <a href="Game.html" class="nav-button">Chase-Click</a>
+        <a href="Game.html" class="nav-button">Scroll-Runner</a>
+        <a href="https://github.com/ISHMEETSINGHSODHI/Click-Rush/blob/64b39f7c571932d5199fa698945621c392ab669f/About.md" target="_blank" rel="noopener noreferrer">About</a>
+        <a href="https://x.com/IshmeetSingh_1" target="_blank" rel="noopener noreferrer">Contact</a>
+ 
+        <a href="02_login.html" id="nav_login">Login</a>
+        <a href="03_register.html" id="nav_register">Register</a>
+        <a href="05_profile.html" id="nav_profile" style="display:none">
+          <button>Profile</button>
+        </a>
+        <button id="nav_logout" style="display:none" onclick="logout()">Logout</button>
+      </nav>
+    </div>
+  </header>
+ <main class="main-content">
+  <!-- welcome line filled by the game.js  -->
+   <p id="welcome_message"></p>
+
+   <!-- Game BOX -->
+    <div id="game_box" style="text-align: center; margin-top: 0rem;"></div>
+
+    <!-- Timer Display  -->
+
+   <div style="font-size: 3rem;color:#e92b4b; margin-bottom: 0.1rem;">
+  ⏱ <span id="timer_display">60</span>s
+  </div>
+
+  <!-- display score  -->
+   <div style="font-size: 2.5rem; margin-bottom: 1.5rem;">
+    Clicks: <span id="score_display">0</span>
+   </div>
+     <!-- Game message (status text) -->
+      <p id="game_message" style="font-size: 1.2rem; margin-bottom: 0.5rem; color: #ccc;">
+        Press Start to Play 
+      </p>
+ 
+      <!--id="start_button" — matches game.js -->
+      <button type="button" id="start_button" class="btn-start" style="font-size: 2.5rem;" >Start Game</button>
+ 
+      <!--id=" click_button" matches game.js, disabled until game starts -->
+      <button type="button" id="click_button" class="btn-start" disabled
+              style="display:block; margin: 0.5rem auto; font-size: 5rem; padding: 150px  150px;">
+        CLICK ME!
+      </button> 
+      <!-- need to consder to register all the clikcks in the window that is point to discuss will see it in later stages  -->
+ 
+    </div>
+ 
+    <!-- leaderboard link after game -->
+    <div style="margin-top: 01rem;">
+      <a href="06_leaderboard.html"><button type="button">View Leaderboard</button></a>
+    </div>
+  </main>
+
+ <script src="js/utils.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/game.js"></script>
+  
+</body>
+</html>

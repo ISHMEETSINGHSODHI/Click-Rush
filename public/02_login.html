@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <header>
+    <div class="container">
+      <div class="logo">
+        <a href="/FrontendWEB/index.html">Click-Rush</a>
+      </div>
+      <nav>
+        <!-- Fix 2: added missing space before class -->
+        <a href="/Game.html" class="nav-button">Chase-Click</a>
+        <a href="/Game.html" class="nav-button">Scroll-Runner</a>
+        <a href="https://github.com/ISHMEETSINGHSODHI/Click-Rush/blob/64b39f7c571932d5199fa698945621c392ab669f/About.md" target="_blank" rel="noopener noreferrer">About</a>
+        <a href="https://x.com/IshmeetSingh_1" target="_blank" rel="noopener noreferrer">Contact</a>
+        <a href="03_register.html">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main_content">
+    <h1>LogIn into Click-Rush</h1>
+    <form id="login_form" action="url" method="get" accept-charset="UTF-16" autocomplete="off" enctype="text/plain">
+
+ <div>
+    <label for="email">Email: </label></br>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      required
+      size="35"
+      placeholder="Your E-Mail"
+      minlength="4"
+      maxlength="40" />
+  </div>
+
+  <div>
+        <label for="hexId">Password :</label></br> 
+        <input 
+        id="hexId"
+        name="hexId" 
+        type="password" 
+        autocomplete="current-password" 
+        placeholder="Password" 
+        minlength="4"
+        maxlength="40" 
+        size="35" 
+        required 
+        />
+      </div>
+
+      <!-- id="login_error" matches auth.js error display -->
+      <p id="login_error" style="color:red;"></p>
+
+      <div>
+     <button  type="submit">LogIn</button>
+     </div>
+
+     <p>Don't have an account? <a href="03_register.html">Register here</a></p>
+    </form>
+  </main>
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

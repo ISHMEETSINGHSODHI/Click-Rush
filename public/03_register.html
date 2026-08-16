@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+    <div class="container">
+      <div class="logo">
+        <a href="01_index.html">Click-Rush</a>
+      </div>
+      <nav>
+        <a href="Game.html" class="nav-button">Chase-Click</a>
+        <a href="Game.html" class="nav-button">Scroll-Runner</a>
+        <a href="https://github.com/ISHMEETSINGHSODHI/Click-Rush/blob/64b39f7c571932d5199fa698945621c392ab669f/About.md" target="_blank" rel="noopener noreferrer">About</a>
+        <a href="https://x.com/IshmeetSingh_1" target="_blank" rel="noopener noreferrer">Contact</a>
+        <a href="02_login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+  
+<main class="main_content">
+    <header>
+    <div class="container">
+      <div class="logo">
+        <a href="01_index.html">Click-Rush</a>
+      </div>
+      <nav>
+        <a href="/Game.html" class="nav-button">Chase-Click</a>
+        <a href="/Game.html" class="nav-button">Scroll-Runner</a>
+        <a href="https://github.com/ISHMEETSINGHSODHI/Click-Rush/blob/64b39f7c571932d5199fa698945621c392ab669f/About.md" target="_blank" rel="noopener noreferrer">About</a>
+        <a href="https://x.com/IshmeetSingh_1" target="_blank" rel="noopener noreferrer">Contact</a>
+        <a href="02_login.html">Login</a>  
+      </nav>
+    </div>
+  </header>
+    <h1>Register With Click-Rush</h1>
+
+        <!--id="register_form" matches auth.js -->
+
+    <form  id="register_form" autocomplete="off">
+    
+    <div>
+     <label for="email">Enter Your Email :</label></br>
+     <input
+       type="email"
+       id="email"
+       name="email"
+       required
+       size="35"
+       placeholder="Your e-mail"
+       minlength="4"
+       maxlength="40" 
+      />
+    </div>  
+
+    <div>
+     <label for="uname">Username </label>
+            <!-- id="uname" matches auth.js -->
+
+     <input
+       type="text"
+       id="uname"
+       name="uname"
+       required
+       size="35"
+       placeholder=" Choose a Username"
+       minlength="4"
+       maxlength="15" 
+     />
+    </div>
+
+
+
+
+    <div>
+        <label for="hexId">Password:</label><br>
+        <!-- id="hexId" matches auth.js -->
+        <input
+          type="password"
+          id="hexId"
+          name="hexId"
+          required
+          size="35"
+          placeholder="Password (min 4 chars)"
+          minlength="4"
+          maxlength="40"
+          autocomplete="new-password"
+        />
+    </div>
+    
+    <!-- id="register_error" matches auth.js error display -->
+      <p id="register_error" style="color:red;"></p>
+
+
+
+     <div> 
+     <button type="submit">Register</button>
+     <p>* By Clicking on submit you consent for the creation of my Click-Ruch account.</p>
+     </div>
+
+     <p>Already have an account? <a href="02_login.html">Login here</a></p>
+     </form>
+     </main>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

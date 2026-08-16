@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>leaderboard Click-Rush</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+     <div class="container">
+      <div class="logo">
+        <a href="01_index.html">Click-Rush</a>
+      </div>
+      <nav>
+        <a href="Game.html" class="nav-button">Chase-Click</a>
+        <a href="Game.html" class="nav-button">Scroll-Runner</a>
+        <a href="https://github.com/ISHMEETSINGHSODHI/Click-Rush/blob/64b39f7c571932d5199fa698945621c392ab669f/About.md" target="_blank" rel="noopener noreferrer">About</a>
+        <a href="https://x.com/IshmeetSingh_1" target="_blank" rel="noopener noreferrer">Contact</a>
+        <a href="04_game.html">Play</a>
+        <a href="05_profile.html"><button>Profile</button></a>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="main_content">
+   <div class="leaderboard" style="display: block;">
+    <h2>LeaderBoard</h2>
+
+          <!-- ✅ IDs match leaderboard.js: "today", "week", "global" -->
+          <div class="leaderboard-buttons">
+           <button type="button" class="filter-btn" id = "today">Today</button>
+           <button type="button" class="filter-btn" id = "week">Week</button>
+           <button type="button" class="filter-btn" id = "global">Global</button>
+           </div>
+
+           <!-- ✅ id="leaderboard_data" matches leaderboard.js -->
+      <div id="leaderboard_data">
+        <!-- Filled dynamically by leaderboard.js -->
+      </div>
+ 
+      <!-- Static table shown as fallback / placeholder -->
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Username</th>
+            <th>Clicks</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard_tbody">
+          <!-- leaderboard.js will fill this -->
+          <tr>
+            <td colspan="4" style="text-align:center; color:#888;">
+              Play a game to appear here!
+            </td>
+          </tr>
+        </tbody>
+      </table>
+ 
+      <div style="margin-top: 2rem;">
+        <a href="04_game.html"><button type="button" class="btn-start">Play Now</button></a>
+      </div> 
+
+    </div> 
+  </main>
+  <script src="js/utils.js"></script>
+  <script src="js/leaderboard.js"></script>
+</body>
+</html>

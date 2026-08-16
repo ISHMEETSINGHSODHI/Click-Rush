@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+      <div class="logo">
+        <a href="01_index.html">Click-Rush</a>
+      </div>
+      <nav>
+        <a href="Game.html" class="nav-button">Chase-Click</a>
+        <a href="Game.html" class="nav-button">Scroll-Runner</a>
+        <a href="https://github.com/ISHMEETSINGHSODHI/Click-Rush/blob/64b39f7c571932d5199fa698945621c392ab669f/About.md" target="_blank" rel="noopener noreferrer">About</a>
+        <a href="https://x.com/IshmeetSingh_1" target="_blank" rel="noopener noreferrer">Contact</a>
+        <a href="04_game.html">Play</a>
+        <a href="06_leaderboard.html">Leaderboard</a>
+        <!-- ✅ id="logout_button" matches profile.js -->
+        <button id="logout_button">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+
+<main class="main_content "> 
+   <h1>My Profile</h1>
+ 
+    <div style="text-align:left; max-width: 500px; font-size: 1.2rem; line-height: 2.5rem;">
+      <!-- ✅ All IDs match profile.js -->
+      <p>👤 Username:   <strong id="profile_username">—</strong></p>
+      <p>📧 Email:      <strong id="profile_email">—</strong></p>
+      <p>🔑 HexID:      <strong id="profile_hexid">—</strong></p>
+      <p>🏆 High Score: <strong id="profile_highscore">—</strong> clicks</p>
+      <p>🌍 Global Rank: <strong id="profile_rank">—</strong></p>
+    </div>
+ 
+    <div style="margin-top: 2rem;">
+      <a href="04_game.html"><button type="button" class="btn-start">Play Again</button></a>
+      <a href="06_leaderboard.html"><button type="button">Leaderboard</button></a>
+    </div>
+</main>
+  <script src="js/utils.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>
