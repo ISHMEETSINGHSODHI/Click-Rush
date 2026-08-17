@@ -1,5 +1,7 @@
 # Click Rush
 
+
+
 A full-stack 60-second click speed game with user accounts, score tracking, and leaderboards. Built with Node.js/Express backend, MySQL database, and a static HTML/CSS/JS frontend — all served from a single Railway deployment.
 
 ## Live Demo
@@ -7,7 +9,9 @@ A full-stack 60-second click speed game with user accounts, score tracking, and 
 ```
 https://click-rush-production.up.railway.app
 ```
-
+```
+https://www.loom.com/share/1eb1baed4633420998541e9e699da943
+```
 ---
 
 ## Tech Stack
