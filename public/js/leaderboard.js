@@ -105,30 +105,41 @@ document.addEventListener("DOMContentLoaded", function () {
  
   // ─── DISPLAY LEADERBOARD ───────────────────────────────────
  
-  function displayLeaderboard(data) {
-    if (!leaderboardData) return;
- 
-    leaderboardData.innerHTML = "";
- 
-    if (data.length === 0) {
-      leaderboardData.innerHTML = "<p>No scores yet. Be the first to play!</p>";
-      return;
-    }
- 
-    data.forEach(function (user) {
-      // Add medal for top 3
-      const medal = user.rank === 1 ? "🥇" : user.rank === 2 ? "🥈" : user.rank === 3 ? "🥉" : `#${user.rank}`;
- 
-      leaderboardData.innerHTML += `
-        <div class="leaderboard-row">
-          <span class="rank">${medal}</span>
-          <span class="username">${user.username}</span>
-          <span class="score">${user.score}</span>
-        </div>
-      `;
-    });
+ function displayLeaderboard(data) {
+  if (!leaderboardTbody) return;
+
+  leaderboardTbody.innerHTML = "";
+
+  if (!data || data.length === 0) {
+    leaderboardTbody.innerHTML = `
+      <tr>
+        <td colspan="4" style="text-align:center; color:#888;">
+          No scores yet. Be the first to play!
+        </td>
+      </tr>`;
+    return;
   }
- 
+
+  data.forEach(function (user) {
+    const medal = user.rank === 1 ? "🥇"
+                : user.rank === 2 ? "🥈"
+                : user.rank === 3 ? "🥉"
+                : `#${user.rank}`;
+
+    const dateStr = user.date
+      ? new Date(user.date).toLocaleDateString()
+      : "-";
+
+    leaderboardTbody.innerHTML += `
+      <tr>
+        <td>${medal}</td>
+        <td>${user.username}</td>
+        <td>${user.score}</td>
+        <td>${dateStr}</td>
+      </tr>
+    `;
+  });
+}
  
   // ─── TAB BUTTON EVENTS ─────────────────────────────────────
   // ✅ Fixed: old code used  globalBtn.addEventListener  but globalBtn was never defined
