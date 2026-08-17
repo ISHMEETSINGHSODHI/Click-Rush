@@ -19,25 +19,28 @@
         <a href="https://x.com/IshmeetSingh_1" target="_blank" rel="noopener noreferrer">Contact</a>
         <a href="game.html">Play</a>
         <a href="leaderboard.html">Leaderboard</a>
-        <!-- id="logout_button" matches profile.js dont make it wring check it in prod  -->
-        <button id="logout_button">Logout</button>
+        <!-- calls the global logout() function defined in utils.js -->
+        <button id="nav-logout" onclick="logout()">Logout</button>
       </nav>
     </div>
   </header>
-
-
-<main class="main_content "> 
+<main class="main_content ">
    <h1>My Profile</h1>
- 
+
     <div style="text-align:left; max-width: 500px; font-size: 1.2rem; line-height: 2.5rem;">
-      <!--  All IDs match profile.js -->
-      <p>👤 Username:   <strong id="profile_username">—</strong></p>
-      <p>📧 Email:      <strong id="profile_email">—</strong></p>
-      <p>🔑 HexID:      <strong id="profile_hexid">—</strong></p>
-      <p>🏆 High Score: <strong id="profile_highscore">—</strong> clicks</p>
-      <p>🌍 Global Rank: <strong id="profile_rank">—</strong></p>
+      <!-- IDs below match profile.js exactly -->
+      <p>👤 Username:    <strong id="profile_username">—</strong></p>
+      <p>📧 Email:       <strong id="profile_email">—</strong></p>
+      <p>🔑 HexID:       <strong id="profile_hexid">—</strong></p>
+      <p>🏆 Best Score:  <strong id="profile_best">—</strong> clicks</p>
+      <p>🎮 Games Played:<strong id="profile_total">—</strong></p>
     </div>
- 
+
+    <div style="margin-top: 2rem;">
+      <h2>Score History</h2>
+      <div id="profile_history"></div>
+    </div>
+
     <div style="margin-top: 2rem;">
       <a href="game.html"><button type="button" class="btn-start">Play Again</button></a>
       <a href="leaderboard.html"><button type="button">Leaderboard</button></a>
