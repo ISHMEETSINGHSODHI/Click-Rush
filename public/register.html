@@ -21,14 +21,12 @@
       </nav>
     </div>
   </header>
-  
+
 <main class="main_content">
     <h1>Register With Click-Rush</h1>
-
         <!--id="register_form" matches auth.js -->
-
     <form  id="register_form" autocomplete="off">
-    
+
     <div>
      <label for="email">Enter Your Email :</label></br>
      <input
@@ -39,14 +37,12 @@
        size="35"
        placeholder="Your e-mail"
        minlength="4"
-       maxlength="40" 
+       maxlength="40"
       />
-    </div>  
-
+    </div>
     <div>
      <label for="uname">Username </label>
             <!-- id="uname" matches auth.js -->
-
      <input
        type="text"
        id="uname"
@@ -55,13 +51,9 @@
        size="35"
        placeholder=" Choose a Username"
        minlength="4"
-       maxlength="15" 
+       maxlength="15"
      />
     </div>
-
-
-
-
     <div>
         <label for="hexId">Password:</label><br>
         <!-- id="hexId" matches auth.js -->
@@ -77,17 +69,13 @@
           autocomplete="new-password"
         />
     </div>
-    
-    <!-- id="register_error" matches auth.js error display -->
-      <p id="register_error" style="color:red;"></p>
 
-
-
-     <div> 
+    <!-- id="register-error" (hyphen) matches auth.js showError()/clearError() calls -->
+      <p id="register-error" style="color:red;"></p>
+     <div>
      <button type="submit">Register</button>
      <p>* By Clicking on submit you consent for the creation of my Click-Ruch account.</p>
      </div>
-
      <p>Already have an account? <a href="login.html">Login here</a></p>
      </form>
      </main>
