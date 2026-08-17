@@ -72,6 +72,10 @@ if (register_form) {
       // No need to store the user in localStorage — getCurrentUser() in
       // utils.js now fetches /api/profile instead of reading localStorage.
       console.log("✅ Registered:", data.user);
+
+      // ✅ Lands on index.html, which now correctly shows a
+      //    "Play Now" button + welcome message for logged-in
+      //    users (see updated index.html / index.js).
       window.location.href = "/";
 
     } catch (err) {
@@ -126,6 +130,10 @@ if (login_form) {
       // NOTE: session cookie is set by the server (credentials: "include").
       // No need to store the user in localStorage — see comment above.
       console.log("✅ Logged in:", data.user);
+
+      // ✅ Lands on index.html, which now correctly shows a
+      //    "Play Now" button + welcome message for logged-in
+      //    users (see updated index.html / index.js).
       window.location.href = "/";
 
     } catch (err) {
