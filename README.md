@@ -13,6 +13,11 @@ https://click-rush-production.up.railway.app
 https://www.loom.com/share/1eb1baed4633420998541e9e699da943
 ```
 ---
+###[Click Rush](https://click-rush-production.up.railway.app)
+
+###[Github REPO ](https://github.com/ISHMEETSINGHSODHI/Click-Rush)
+
+###[loom features video link ]([https://click-rush-production.up.railway.app](https://www.loom.com/share/1eb1baed4633420998541e9e699da943))
 
 ## Tech Stack
 
