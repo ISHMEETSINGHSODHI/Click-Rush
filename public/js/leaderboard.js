@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Those elements only exist in index.html, not leaderboard.html
   // Each JS file should only grab elements from its OWN page
  
-  const leaderboardData = document.getElementById("leaderboardData");
+  const leaderboardData = document.getElementById("leaderboard_data");
   const btnGlobal  = document.getElementById("global");
   const btnWeekly  = document.getElementById("week");
   const btnDaily   = document.getElementById("today");
