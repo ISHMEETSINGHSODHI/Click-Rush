@@ -7,12 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-
     <header>
     <div class="container">
       <div class="logo">
-        <a href="/FrontendWEB/index.html">Click-Rush</a>
+        <a href="index.html">Click-Rush</a>
       </div>
       <nav>
         <a href="othergames.html" class="nav-button">Chase-Click</a>
@@ -23,11 +21,10 @@
       </nav>
     </div>
   </header>
-
   <main class="main_content">
     <h1>LogIn into Click-Rush</h1>
-    <form id="login_form" action="url" method="get" accept-charset="UTF-16" autocomplete="off" enctype="text/plain">
-
+    <!-- id="login_form" matches auth.js -->
+    <form id="login_form" autocomplete="off">
  <div>
     <label for="email">Email: </label></br>
     <input
@@ -40,29 +37,25 @@
       minlength="4"
       maxlength="40" />
   </div>
-
   <div>
-        <label for="hexId">Password :</label></br> 
-        <input 
+        <label for="hexId">Password :</label></br>
+        <input
         id="hexId"
-        name="hexId" 
-        type="password" 
-        autocomplete="current-password" 
-        placeholder="Password" 
+        name="hexId"
+        type="password"
+        autocomplete="current-password"
+        placeholder="Password"
         minlength="4"
-        maxlength="40" 
-        size="35" 
-        required 
+        maxlength="40"
+        size="35"
+        required
         />
       </div>
-
-      <!-- id="login_error" matches auth.js error display -->
-      <p id="login_error" style="color:red;"></p>
-
+      <!-- id="login-error" (hyphen) matches auth.js showError()/clearError() calls -->
+      <p id="login-error" style="color:red;"></p>
       <div>
      <button  type="submit">LogIn</button>
      </div>
-
      <p>Don't have an account? <a href="register.html">Register here</a></p>
     </form>
   </main>
