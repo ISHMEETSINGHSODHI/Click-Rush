@@ -20,11 +20,9 @@
         <a href="othergames.html" class="nav-button">Scroll-Runner</a>
         <a href="https://github.com/ISHMEETSINGHSODHI/Click-Rush/blob/64b39f7c571932d5199fa698945621c392ab669f/About.md" target="_blank" rel="noopener noreferrer">About</a>
         <a href="https://x.com/IshmeetSingh_1" target="_blank" rel="noopener noreferrer">Contact</a>
-
         <!-- show when logged OUT -->
         <a href="login.html" rel="noopener noreferrer" id="nav-login">Login</a>
         <a href="register.html" rel="noopener noreferrer" id="nav-register">Register</a>
-
         <!-- show when logged IN (toggled by updateNav() in utils.js) -->
         <span id="nav-username"></span>
         <a href="profile.html" id="nav-profile" style="display:none;">
@@ -39,14 +37,22 @@
       <h2> Welcome to Click-Rush</h2>
       <h3>Click your mouse fast , as many times as you can in 60 seconds!</h3>
     </div>
-    <!-- welcome message shown when logged in -->
-    <p id="welcome_message"></p>
+
+    <!-- welcome message shown when logged in (filled by index.js) -->
+    <p id="welcome_message" style="display:none;"></p>
+
+    <!-- shown to guests -->
     <div id="login_register">
       <a href="register.html"><button type="button" class="register" id="register_cta">Register</button></a>
       <a href="login.html"><button type="button" class="login" id="login_cta">Log In</button></a>
     </div>
     <div id="skip">
       <a href="game.html"><button type="button">Skip For Now</button></a>
+    </div>
+
+    <!-- shown to logged-in users (toggled by index.js) -->
+    <div id="play_now" style="display:none;">
+      <a href="game.html"><button type="button" class="btn-start">Play Now</button></a>
     </div>
   </main>
   <!-- utils.js FIRST, then index.js -->
