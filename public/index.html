@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- will be clearing the whole code after all the thing ase clear tnaks my love  -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,7 +10,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header>
     <div class="container">
       <div class="logo">
@@ -21,21 +19,21 @@
         <a href="othergames.html" class="nav-button">Chase-Click</a>
         <a href="othergames.html" class="nav-button">Scroll-Runner</a>
         <a href="https://github.com/ISHMEETSINGHSODHI/Click-Rush/blob/64b39f7c571932d5199fa698945621c392ab669f/About.md" target="_blank" rel="noopener noreferrer">About</a>
-                <a href="https://x.com/IshmeetSingh_1" target="_blank" rel="noopener noreferrer">Contact</a>
+        <a href="https://x.com/IshmeetSingh_1" target="_blank" rel="noopener noreferrer">Contact</a>
 
-       <!-- show when logged OUT -->
-        <a href="login.html" rel="noopener noreferrer" id="login">Login</a>
-        <a href="register.html"rel="noopener noreferrer" id="register">Register</a>
+        <!-- show when logged OUT -->
+        <a href="login.html" rel="noopener noreferrer" id="nav-login">Login</a>
+        <a href="register.html" rel="noopener noreferrer" id="nav-register">Register</a>
 
-        <!-- show when logged IN  (hidden by the index.js on load ) -->
-       <a href="profile.html" id ="nav_profile" style="display:none;">
-        <button id="profileButton">Profile</button>
-      </a>
-        <button id="nav_logout" style="display:none" onclick="logout()">Logout</button>
+        <!-- show when logged IN (toggled by updateNav() in utils.js) -->
+        <span id="nav-username"></span>
+        <a href="profile.html" id="nav-profile" style="display:none;">
+          <button type="button">Profile</button>
+        </a>
+        <button id="nav-logout" style="display:none" onclick="logout()">Logout</button>
       </nav>
     </div>
   </header>
-
   <main class="main_content">
     <div class="info">
       <h2> Welcome to Click-Rush</h2>
@@ -43,17 +41,14 @@
     </div>
     <!-- welcome message shown when logged in -->
     <p id="welcome_message"></p>
-
-<div  id="login_register">
-  <a href="register.html"><button type="button" class="register" id="register">Register</button></a>
-  <a href="login.html"><button type="button" class="login" id="login">Log In</button></a>
-</div>
-
-<div id="skip">
-<a href="game.html"><button type="button">Skip For Now</button></a>
-</div>
-</main>
-
+    <div id="login_register">
+      <a href="register.html"><button type="button" class="register" id="register_cta">Register</button></a>
+      <a href="login.html"><button type="button" class="login" id="login_cta">Log In</button></a>
+    </div>
+    <div id="skip">
+      <a href="game.html"><button type="button">Skip For Now</button></a>
+    </div>
+  </main>
   <!-- utils.js FIRST, then index.js -->
   <script src="js/utils.js"></script>
   <script src="js/index.js"></script>
