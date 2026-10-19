@@ -3,6 +3,7 @@
 const express = require("express");
 const router  = express.Router();
 const db      = require("../db/connection");
+// const hello  = 
 
 // GET /api/leaderboard/:type
 // type = "global" | "weekly" | "daily"
